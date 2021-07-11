@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// MongoDB schema
 const schema = {
   day: {
     type: Date,
@@ -35,6 +36,7 @@ const schema = {
   ],
 };
 
+// schema for virtual properties
 const virtuals = {
   toJSON: {
     virtuals: true,
@@ -43,6 +45,7 @@ const virtuals = {
 
 const WorkoutSchema = new mongoose.Schema(schema, virtuals);
 
+// function to add aggregate exercise duration as a virtual property to database
 function calculateTotalDuration() {
   const callback = (aggregate, exercise) => {
     return aggregate + exercise.duration;
@@ -53,6 +56,7 @@ function calculateTotalDuration() {
   return totalDuration;
 }
 
+// add schema for virtual properties to database
 WorkoutSchema.virtual("totalDuration").get(calculateTotalDuration);
 
 const Workout = mongoose.model("Workout", WorkoutSchema);

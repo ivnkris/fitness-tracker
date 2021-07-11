@@ -1,5 +1,6 @@
 const { Workout } = require("../models");
 
+// find all workouts in database
 const getAllWorkouts = async (req, res) => {
   try {
     const allWorkoutsData = await Workout.find();
@@ -10,6 +11,7 @@ const getAllWorkouts = async (req, res) => {
   }
 };
 
+// find current workout by id to update in database
 const changeWorkout = async (req, res) => {
   try {
     const workoutData = await Workout.findByIdAndUpdate(req.params.id, {
@@ -22,6 +24,7 @@ const changeWorkout = async (req, res) => {
   }
 };
 
+// add new workout to database
 const createWorkout = async (req, res) => {
   try {
     const workoutData = await Workout.create({});
@@ -32,6 +35,7 @@ const createWorkout = async (req, res) => {
   }
 };
 
+// get workouts for stats page
 const getWorkoutRange = async (req, res) => {
   try {
     const workoutData = await Workout.find();

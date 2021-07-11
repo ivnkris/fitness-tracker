@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const { DB_URL, MONGOOSE_OPTIONS } = require("./config");
 
+// connect to MongoDB database
 const connect = async () => {
   try {
     await mongoose.connect(DB_URL, MONGOOSE_OPTIONS);
@@ -11,6 +12,7 @@ const connect = async () => {
   }
 };
 
+// disconnect from MongoDB database
 const disconnect = async () => {
   try {
     await mongoose.connection.close();
