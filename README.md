@@ -40,10 +40,15 @@ https://github.com/ivnkris/fitness-tracker
 
 ## Link to deployed application
 
+https://fitness-tracker-ivnkris.herokuapp.com/
+
 ## Screenshots
 
-![Screenshot 1]()
-![Screenshot 2]()
+![Screenshot 1](./utils/images/Screenshot1.png)
+![Screenshot 2](./utils/images/Screenshot2.png)
+![Screenshot 3](./utils/images/Screenshot3.png)
+![Screenshot 4](./utils/images/Screenshot4.png)
+![Screenshot 5](./utils/images/Screenshot5.png)
 
 ## Questions
 
