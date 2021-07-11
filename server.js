@@ -1,6 +1,3 @@
-// add routes: view - /stats; /exercise; /
-// api: /workouts - / GET all; /:id PUT single workout; / POST workout; /range GET aggregate??
-
 const express = require("express");
 
 const { connect } = require("./db");
