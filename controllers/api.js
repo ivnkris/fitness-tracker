@@ -42,20 +42,9 @@ const getWorkoutRange = async (req, res) => {
   }
 };
 
-const createWorkoutRange = async (req, res) => {
-  try {
-    const workoutData = await Workout.create({});
-    return res.status(200).json(workoutData);
-  } catch (error) {
-    console.info(error.message);
-    return res.status(500).json({ error: "Failed to create workout." });
-  }
-};
-
 module.exports = {
   getAllWorkouts,
   changeWorkout,
   createWorkout,
   getWorkoutRange,
-  createWorkoutRange,
 };
